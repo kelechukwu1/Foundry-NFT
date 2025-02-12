@@ -11,7 +11,7 @@ contract MintBasicNft is Script {
 
     function run() external {
         address mostRecentlyDeployed = DevOpsTools.get_most_recent_deployment(
-            "BasicNft",
+            "BasicNFT",
             block.chainid
         );
         MintNftOnContract(mostRecentlyDeployed);
@@ -20,6 +20,6 @@ contract MintBasicNft is Script {
     function MintNftOnContract(address contractAddress) public {
         vm.startBroadcast();
         BasicNFT(contractAddress).mintNft(PUG);
-        vm.startBroadcast();
+        vm.stopBroadcast();
     }
 }
