@@ -44,3 +44,5 @@ contract MoodNftIntegrationTest is Test {
         );
     }
 }
+//write script for minting the MoodNft
+//write script for flipping the MoodNft
